@@ -1,6 +1,7 @@
 <template>
   <div class="w-full text-left p-3 mt-5">
     <h1>Works</h1>
+    <p>趣味でデザインしたものです</p>
     <section class="my-4">
     <Card :contents ="works.contents"></Card>
     </section>
