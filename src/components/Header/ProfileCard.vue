@@ -11,6 +11,7 @@
             <p class="text-base">生年月日：{{ birthday }}</p>
           </div>
         </div>
+        <p class="text-base">{{ comment }}</p>
         <Links class="mt-5"></Links>
       </div>
       
@@ -27,10 +28,10 @@ export default {
   },
   data() {
     return {
-      name: "yu-9(悠久)",
+      name: "悠久(yukyu)",
       name_kana: "ゆうきゅう",
-      birthday: "199X/9/30"
-      
+      birthday: "199X/9/30",
+      comment:"いろいろ作ってます。"
     };
   },
 };
