@@ -1,6 +1,6 @@
 module.exports = {
     publicPath: './',
-    outputDir: 'docs',
+    outputDir: 'dist',
     chainWebpack: config => {
       config.module
         .rule('md')
