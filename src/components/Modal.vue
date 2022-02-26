@@ -1,8 +1,8 @@
 <template>
-    <div class="overflow-x-hidden overflow-y-auto text-blue-700 fixed inset-0 z-40 outline-none focus:outline-none justify-center items-center flex">
-        <div class="relative w-auto my-6  max-w-3xl mx-1 md:mx-0">
+    <div class="text-blue-700 fixed inset-0 z-40 outline-none focus:outline-none justify-center items-center flex">
+        <div class="relative w-auto max-h-full overflow-y-scroll scrollbar-hidden my-6 max-w-3xl mx-1 md:mx-0">
             <!--content-->
-            <div class="  md:h-screen-80 border-0  rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+            <div class=" md:h-screen-80 border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                 <!--header-->
                 <div class="flex md:h-20 items-start justify-between p-5 border-b border-solid border-gray-300 rounded-t">
                     <h3 class="text-3xl font-semibold">{{ content.title }}</h3>
@@ -29,7 +29,7 @@
                         
                 </div>
                 <!--footer-->
-                <div v-if="content.categories.length" class="p-6 md:h-20 border-gray-300 rounded-b">
+                <div v-if="content.categories.length" class="p-6 border-gray-300 rounded-b">
                     <p  class="tag" v-for="category in content.categories"  :key="category.index">{{category.name}}</p>                   
                 </div>
              </div>
@@ -73,5 +73,12 @@ export default {
 <style>
 content-loader {
     max-width: 100%;
+}
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
 }
 </style>
